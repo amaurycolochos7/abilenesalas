@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Abilene Salas - DASH Studio
 
-## Getting Started
+Sistema de reservas y gestión de citas para estudios de micropigmentación, pestañas y tratamientos láser.
 
-First, run the development server:
+## 🚀 Despliegue en Vercel
+
+### Opción 1: Desde la Interfaz Web de Vercel
+
+1. Ve a [Vercel](https://vercel.com) e inicia sesión con GitHub
+2. Haz clic en "Add New..." → "Project"
+3. Importa el repositorio de este proyecto
+4. Vercel detectará automáticamente que es un proyecto Next.js
+5. Haz clic en "Deploy"
+
+### Opción 2: Desde la Terminal
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Instalar Vercel CLI globalmente
+npm install -g vercel
+
+# Desde la raíz del proyecto, ejecutar:
+vercel
+
+# Seguir las instrucciones en pantalla
+# Para producción:
+vercel --prod
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Desarrollo Local
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Instalar dependencias
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Ejecutar servidor de desarrollo
+npm run dev
 
-## Learn More
+# El proyecto estará disponible en http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Build de Producción
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Crear build optimizado
+npm run build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Ejecutar build de producción localmente
+npm start
+```
 
-## Deploy on Vercel
+## 📄 Estructura del Proyecto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+├── app/
+│   ├── page.tsx              # Página principal
+│   ├── servicios/
+│   │   └── page.tsx          # Catálogo de servicios
+│   ├── galeria/
+│   │   └── page.tsx          # Galería de trabajos
+│   ├── sucursales/
+│   │   └── page.tsx          # Listado de sucursales
+│   ├── promociones/
+│   │   └── page.tsx          # Promociones activas
+│   └── reservar/
+│       └── page.tsx          # Sistema de reservas
+└── public/
+    └── images/               # Recursos estáticos
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ✨ Características
+
+- ✅ Sistema de reservas paso a paso
+- ✅ Catálogo completo de servicios con precios
+- ✅ Galería de trabajos realizados
+- ✅ Información de sucursales
+- ✅ Promociones y ofertas
+- ✅ Diseño responsivo (móvil, tablet, desktop)
+- ✅ Optimizado para SEO
+- ✅ Animaciones suaves y premium
+
+## 🎨 Tecnologías
+
+- Next.js 15
+- TypeScript  
+- Tailwind CSS
+- CSS personalizado con sistema de diseño premium
+
+## 📱 Responsividad
+
+El sitio está completamente optimizado para:
+- 📱 Móviles (< 640px)
+- 📱 Tablets (640px - 1024px)
+- 💻 Desktop (> 1024px)
+
+## 🔗 Enlaces del Sitio
+
+- `/` - Página principal
+- `/servicios` - Catálogo de servicios
+- `/galeria` - Galería de trabajos
+- `/sucursales` - Ubicaciones
+- `/promociones` - Ofertas especiales
+- `/reservar` - Sistema de reservas
+
+## 📞 Contacto
+
+- WhatsApp: +52 81 1234 5678
+- Instagram: @dash_pmu.lash
+- Email: contacto@dashstudio.com
+
+## 📝 Notas para Producción
+
+Antes de desplegar a producción, asegúrate de:
+
+1. Actualizar los números de teléfono reales en:
+   - `/sucursales/page.tsx`
+   - `/promociones/page.tsx` 
+   - `/page.tsx` (footer)
+
+2. Agregar las imágenes reales en `/public/images/`
+
+3. Conectar con el backend para reservas reales (actualmente simulado)
+
+4. Configurar variables de entorno si las necesitas
+
+## 🎯 Demostración
+
+Este proyecto está configurado con información de demostración realista para presentar a la cliente. Todos los servicios, precios y promociones son ejemplos que pueden ajustarse según las necesidades del negocio.

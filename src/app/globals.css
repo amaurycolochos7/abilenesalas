@@ -1,26 +1,286 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors - Abilene Salas */
+  --color-primary: #d4a574;
+  --color-primary-light: #e8c9a8;
+  --color-primary-dark: #b8845a;
+  --color-secondary: #2d2d2d;
+  --color-accent: #f5e6d8;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #d4a574 0%, #b8845a 100%);
+  --gradient-dark: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+  --gradient-luxury: linear-gradient(135deg, #d4a574 0%, #e8c9a8 50%, #d4a574 100%);
+
+  /* Shadows */
+  --shadow-soft: 0 4px 20px rgba(212, 165, 116, 0.15);
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 12px 40px rgba(212, 165, 116, 0.25);
+
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Base styles */
+body {
+  font-family: var(--font-body);
+  background: #faf9f7;
+  color: #2d2d2d;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Premium Button Styles */
+.btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-secondary);
+  padding: 0.875rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 2px solid var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Card Styles */
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Section Styles */
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 1.125rem;
+  max-width: 600px;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Badge Styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.badge-primary {
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+}
+
+.badge-success {
+  background: #d4edda;
+  color: #155724;
+}
+
+.badge-warning {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.badge-danger {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Input Styles */
+.input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 2px solid #e5e5e5;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.15);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.875rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Mejoras para navegación móvil */
+  nav .glass {
+    padding: 0.5rem 0;
+  }
+
+  /* Espaciado mejorado */
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Cards más compactas */
+  .card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-title {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Logo responsive */
+  nav img {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Texto hero responsive */
+  h1 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+
+  /* Botones full width en móvil cuando sea apropiado */
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.875rem 1.25rem;
+  }
+
+  /* Grid de 1 columna en móvil */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Espaciado reducido para móvil */
+  .card {
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  /* Input más grande para móvil */
+  .input {
+    padding: 0.875rem 1rem;
+    font-size: 16px;
+    /* Evita zoom en iOS */
+  }
 }
