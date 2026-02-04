@@ -4,8 +4,26 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
+// Type definition for services
+interface Service {
+    id: string;
+    name: string;
+    description: string;
+    price: number;
+    duration: number;
+    benefits: string[];
+    images?: string[];
+}
+
+interface ServiceCategory {
+    id: string;
+    name: string;
+    description: string;
+    services: Service[];
+}
+
 // Servicios organizados por categorías
-const serviceCategories = [
+const serviceCategories: ServiceCategory[] = [
     {
         id: "micropigmentacion",
         name: "Micropigmentación",
