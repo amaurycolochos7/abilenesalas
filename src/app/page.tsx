@@ -46,8 +46,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-1">
-              <div className="relative h-10 w-24 sm:h-12 sm:w-32">
+            <Link href="/" className="flex items-center">
+              <div className="relative h-10 w-20 sm:h-12 sm:w-24">
                 <Image
                   src="/images/logo/dash-studio-logo.png"
                   alt="DASH Studio Logo"
@@ -56,7 +56,7 @@ export default function Home() {
                   priority
                 />
               </div>
-              <span className="text-base sm:text-xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-display)' }}>
+              <span className="-ml-1 text-base sm:text-xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-display)' }}>
                 Abilene Salas
               </span>
             </Link>
