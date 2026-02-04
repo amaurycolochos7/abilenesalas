@@ -51,8 +51,8 @@ export default function LoginPage() {
                     <Link href="/" className="inline-flex items-center justify-center space-x-3 mb-6">
                         <div className="relative w-12 h-12">
                             <Image
-                                src="/images/logo/logo.png"
-                                alt="Abilene Salas Logo"
+                                src="/images/logo/dash-studio-logo.png"
+                                alt="DASH Studio Logo"
                                 fill
                                 className="object-contain"
                             />
@@ -167,3 +167,4 @@ export default function LoginPage() {
         </div>
     );
 }
+

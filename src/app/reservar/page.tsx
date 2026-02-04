@@ -288,8 +288,8 @@ function ReservarContent() {
                     <Link href="/" className="flex items-center space-x-3">
                         <div className="relative w-10 h-10 sm:w-12 sm:h-12">
                             <Image
-                                src="/images/logo/logo.png"
-                                alt="Abilene Salas Logo"
+                                src="/images/logo/dash-studio-logo.png"
+                                alt="DASH Studio Logo"
                                 fill
                                 className="object-contain"
                             />
@@ -598,3 +598,4 @@ export default function ReservarPage() {
         </Suspense>
     );
 }
+

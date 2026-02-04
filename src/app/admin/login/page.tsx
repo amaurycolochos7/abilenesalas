@@ -57,8 +57,8 @@ export default function AdminLoginPage() {
                     <div className="inline-flex items-center justify-center space-x-3 mb-6">
                         <div className="relative w-12 h-12 bg-white rounded-lg p-2">
                             <Image
-                                src="/images/logo/logo.png"
-                                alt="Abilene Salas Logo"
+                                src="/images/logo/dash-studio-logo.png"
+                                alt="DASH Studio Logo"
                                 fill
                                 className="object-contain"
                             />
@@ -184,3 +184,4 @@ export default function AdminLoginPage() {
         </div>
     );
 }
+

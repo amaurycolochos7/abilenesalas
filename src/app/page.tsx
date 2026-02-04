@@ -46,18 +46,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
-              <div className="relative w-8 h-8 sm:w-10 sm:h-10">
+            <Link href="/" className="flex items-center">
+              <div className="relative h-12 w-40 sm:h-14 sm:w-48">
                 <Image
-                  src="/images/logo/logo.png"
-                  alt="Abilene Salas Logo"
+                  src="/images/logo/dash-studio-logo.png"
+                  alt="DASH Studio Logo"
                   fill
                   className="object-contain"
+                  priority
                 />
               </div>
-              <span className="text-lg sm:text-2xl font-bold gradient-text" style={{ fontFamily: 'var(--font-display)' }}>
-                Abilene Salas
-              </span>
             </Link>
 
             {/* Desktop Menu */}
@@ -396,17 +394,14 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="relative w-8 h-8">
+                <div className="relative h-12 w-40">
                   <Image
-                    src="/images/logo/logo.png"
-                    alt="Abilene Salas Logo"
+                    src="/images/logo/dash-studio-logo.png"
+                    alt="DASH Studio Logo"
                     fill
                     className="object-contain brightness-0 invert"
                   />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold gradient-text" style={{ fontFamily: 'var(--font-display)' }}>
-                  Abilene Salas
-                </h3>
               </div>
               <p className="text-sm sm:text-base text-gray-400 mb-4 max-w-md">
                 Master en Micropigmentación y CEO de DASH Studio. Transformando miradas con pasión y profesionalismo.
@@ -539,3 +534,4 @@ export default function Home() {
     </div>
   );
 }
+

@@ -13,8 +13,8 @@ export default function PrivacidadPage() {
                         <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
                             <div className="relative w-8 h-8 sm:w-10 sm:h-10">
                                 <Image
-                                    src="/images/logo/logo.png"
-                                    alt="Abilene Salas Logo"
+                                    src="/images/logo/dash-studio-logo.png"
+                                    alt="DASH Studio Logo"
                                     fill
                                     className="object-contain"
                                 />
@@ -265,3 +265,4 @@ export default function PrivacidadPage() {
         </div>
     );
 }
+
