@@ -81,8 +81,14 @@ export default function GaleriaPage() {
                             </span>
                         </Link>
 
-                        <Link href="/" className="text-gray-700 hover:text-[#d4a574] transition">
-                            ← Volver al inicio
+                        <Link
+                            href="/"
+                            className="group flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-gray-200 hover:border-[#d4a574] hover:bg-[#fef9f5] transition-all"
+                        >
+                            <svg className="w-5 h-5 text-gray-600 group-hover:text-[#d4a574] transition-colors group-hover:-translate-x-1 transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                            </svg>
+                            <span className="font-medium text-gray-700 group-hover:text-[#d4a574] transition-colors">Volver al inicio</span>
                         </Link>
                     </div>
                 </div>

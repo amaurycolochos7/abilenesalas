@@ -13,27 +13,51 @@ const serviceCategories = [
         services: [
             {
                 id: "cejas-microblading",
-                name: "Microblading de Cejas",
-                description: "Técnica pelo a pelo hiperrealista que simula vello natural. Ideal para cejas escasas o sin forma definida.",
-                price: 2500,
+                name: "Microblading",
+                description: "Técnica de micropigmentación que recrea cada vello de la ceja de manera individual con micro cortes, logrando un efecto natural de cejas rellenas y definidas. Apta únicamente para pieles secas de 19 a 35 años. NO ES APTO PARA PIELES SENSIBLES. Duración de hasta 1 a 2 años con su retoque (Costo de retoque $1,500).",
+                price: 5000,
                 duration: 120,
-                benefits: ["Resultado natural", "Duración 12-18 meses", "Retoque incluido"],
+                benefits: ["Efecto natural pelo a pelo", "Solo pieles secas (19-35 años)", "NO apto pieles sensibles", "Duración 1-2 años"],
             },
             {
                 id: "cejas-powder",
-                name: "Cejas Powder Brows",
-                description: "Efecto maquillado suave y difuminado. Perfecto para un look más definido y glamoroso.",
-                price: 2800,
+                name: "Powder Brows",
+                description: "Cejas con efecto maquillaje, diseñadas con mi técnica original de sombreado: perfeccionada por mí y única en su calidad en Chiapas. Aunque hoy en día otros intentan replicarla, ninguna logra el acabado, duración y tono que yo consigo. No cambian a colores indeseados, son ideales para piel grasa, cicatrizan suave y su diseño es 100% personalizado. Duración de 2 a 4 años con su retoque / El retoque tiene costo de $1,500",
+                price: 5000,
                 duration: 120,
-                benefits: ["Efecto maquillado", "Duración 18-24 meses", "Ideal para piel grasa"],
+                benefits: ["Técnica exclusiva único en Chiapas", "No cambian a colores indeseados", "Ideales para piel grasa", "Cicatrización suave", "Diseño 100% personalizado", "Duración de 2 a 4 años"],
             },
             {
-                id: "labios",
-                name: "Micropigmentación de Labios",
-                description: "Definición, color y volumen para tus labios. Técnicas de perfilado, degradado o color completo.",
-                price: 2800,
-                duration: 90,
-                benefits: ["Labios definidos 24/7", "Duración 18-24 meses", "Colores personalizados"],
+                id: "luxury-brows",
+                name: "Luxury Brows",
+                description: "🇨🇴 Desde Colombia, traigo a Chiapas una técnica exclusiva y de alto nivel: Luxury Brows. Un sombreado delicadamente difuminado que deja un efecto maquillaje natural, suave y elegante. Apta para todo tipo de pieles, incluso las más sensibles. Cicatriza limpio, sin costras visibles, y mantiene su color intacto con el paso del tiempo. Duración de 2 a 3 años con su retoque (Costo de retoque $1,500).",
+                price: 5000,
+                duration: 150,
+                benefits: ["Técnica exclusiva de Colombia 🇨🇴", "Efecto maquillaje natural y suave", "Apta para pieles sensibles", "Cicatriza sin costras visibles"],
+            },
+            {
+                id: "cejas-latin-brows",
+                name: "Latín Brows",
+                description: "Técnica de micropigmentación híbrida que combina dos mundos: Powder y Microblading. Perfecta para quienes buscan cejas bien estructuradas y con un acabado equilibrado entre lo natural y lo delineado. Es apto para pieles seca, normal y mixta. Dando un aspecto hermoso y equilibrado. Duración de 2 a 3 años con su retoque (Costo de retoque es de $1,500).",
+                price: 5000,
+                duration: 120,
+                benefits: ["Técnica híbrida (Powder + Microblading)", "Cejas estructuradas y equilibradas", "Apto piel seca, normal y mixta", "Duración 2-3 años"],
+            },
+            {
+                id: "neutralizacion-labial",
+                name: "Neutralización Labial",
+                description: "Técnica de micropigmentación labial para aclarar labios oscuros y con manchas. Deja un tono uniforme, natural y delicado. Retoque a los 3 meses (Costo de retoque $3,000).",
+                price: 8000,
+                duration: 150,
+                benefits: ["Aclara labios oscuros", "Tono uniforme y natural", "Efecto delicado"],
+            },
+            {
+                id: "micro-lips",
+                name: "Micro Lips",
+                description: "Micropigmentación labial que ofrece un color natural con efecto de volumen ruso. Define y realza la forma, logrando un aspecto voluminoso y elegante. Acabado suave y sofisticado. Retoque a los 3 meses (Costo de retoque $3,000).",
+                price: 8000,
+                duration: 150,
+                benefits: ["Volumen ruso visual", "Color natural", "Acabado suave y esponjoso"],
             },
             {
                 id: "ojos",
@@ -51,12 +75,28 @@ const serviceCategories = [
         description: "Volumen y longitud instantánea para tu mirada",
         services: [
             {
+                id: "efecto-rimel",
+                name: "Efecto Rímel",
+                description: "Consiste en llevarte una extensión flat por pestaña. Material premium (Da un aspecto de más grosor y negras: al ser flat su peso es el mismo que una clásica, pero su resultado es distinto)",
+                price: 900,
+                duration: 100,
+                benefits: ["Aspecto de más grosor", "Color negro intenso", "Peso ligero (Flat)"],
+            },
+            {
                 id: "clasicas",
                 name: "Pestañas Clásicas",
-                description: "Una extensión por pestaña natural. Look elegante y sutil, perfecto para el día a día.",
-                price: 800,
+                description: "Consiste en llevarte una extensión por pestaña. Material premium (son mates y ligeras: te da un aspecto natural).",
+                price: 900,
                 duration: 90,
-                benefits: ["Efecto natural", "Duración 3-4 semanas", "Fácil mantenimiento"],
+                benefits: ["Efecto natural", "Material premium (Mate/Ligero)", "Una extensión por pestaña"],
+            },
+            {
+                id: "volumen-griego",
+                name: "Volumen Griego",
+                description: "El volumen más ligero y elegante. Una técnica sofisticada para quienes buscan un realce notorio pero refinado.",
+                price: 900,
+                duration: 100,
+                benefits: ["Volumen ligero y elegante", "Acabado sofisticado", "Duración 3-4 semanas"],
             },
             {
                 id: "volumen",
@@ -117,13 +157,131 @@ const serviceCategories = [
     },
 ];
 
+// Helper para formatear precio
+const formatPrice = (price: number) => {
+    return new Intl.NumberFormat('es-MX', {
+        style: 'currency',
+        currency: 'MXN',
+        minimumFractionDigits: 2
+    }).format(price) + ' MXN';
+};
+
 export default function ServiciosPage() {
     const [selectedCategory, setSelectedCategory] = useState<string>("all");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const [selectedService, setSelectedService] = useState<any>(null);
+    const [currentImageIndex, setCurrentImageIndex] = useState<number>(-1);
 
     const filteredCategories =
         selectedCategory === "all"
             ? serviceCategories
             : serviceCategories.filter((cat) => cat.id === selectedCategory);
+
+    // Update Powder Brows data with images if not present in source
+    const enhancedServiceCategories = serviceCategories.map(cat => ({
+        ...cat,
+        services: cat.services.map(service => {
+            if (service.id === 'cejas-powder' && !service.images) {
+                return {
+                    ...service,
+                    images: [
+                        "/images/services/powder-brows/1.png",
+                        "/images/services/powder-brows/2.jpg",
+                        "/images/services/powder-brows/3.jpg",
+                        "/images/services/powder-brows/4.png",
+                        "/images/services/powder-brows/5.png"
+                    ]
+                };
+            }
+            if (service.id === 'cejas-microblading' && !service.images) {
+                return {
+                    ...service,
+                    images: [
+                        "/images/services/microblading/1.png",
+                        "/images/services/microblading/2.jpg",
+                        "/images/services/microblading/3.jpg",
+                        "/images/services/microblading/4.jpg",
+                        "/images/services/microblading/5.png"
+                    ]
+                };
+            }
+            if (service.id === 'cejas-latin-brows' && !service.images) {
+                return {
+                    ...service,
+                    images: [
+                        "/images/services/latin-brows/1.jpg",
+                        "/images/services/latin-brows/2.jpg",
+                        "/images/services/latin-brows/3.jpg"
+                    ]
+                };
+            }
+            if (service.id === 'luxury-brows' && !service.images) {
+                return {
+                    ...service,
+                    images: [
+                        "/images/services/luxury-brows/1.jpg",
+                        "/images/services/luxury-brows/2.jpg"
+                    ]
+                };
+            }
+            if (service.id === 'neutralizacion-labial' && !service.images) {
+                return {
+                    ...service,
+                    images: [
+                        "/images/services/neutralizacion-labial/1.jpg"
+                    ]
+                };
+            }
+            if (service.id === 'micro-lips' && !service.images) {
+                return {
+                    ...service,
+                    images: [
+                        "/images/services/micro-lips/1.jpg",
+                        "/images/services/micro-lips/2.jpg",
+                        "/images/services/micro-lips/3.png",
+                        "/images/services/micro-lips/4.jpg",
+                        "/images/services/micro-lips/5.png"
+                    ]
+                };
+            }
+            if (service.id === 'volumen-griego' && !service.images) {
+                return {
+                    ...service,
+                    images: [
+                        "/images/services/volumen-griego/1.png",
+                        "/images/services/volumen-griego/2.png"
+                    ]
+                };
+            }
+
+            if (service.id === 'efecto-rimel' && !service.images) {
+                return {
+                    ...service,
+                    images: [
+                        "/images/services/efecto-rimel/1.png",
+                        "/images/services/efecto-rimel/2.png",
+                        "/images/services/efecto-rimel/3.png"
+                    ]
+                };
+            }
+
+            if (service.id === 'clasicas' && !service.images) {
+                return {
+                    ...service,
+                    images: [
+                        "/images/services/clasicas/1.png",
+                        "/images/services/clasicas/2.jpg",
+                        "/images/services/clasicas/3.jpg"
+                    ]
+                };
+            }
+            return service;
+        })
+    }));
+
+    const activeCategories = selectedCategory === "all"
+        ? enhancedServiceCategories
+        : enhancedServiceCategories.filter(cat => cat.id === selectedCategory);
 
     return (
         <div className="min-h-screen bg-[#faf9f7]">
@@ -145,8 +303,14 @@ export default function ServiciosPage() {
                             </span>
                         </Link>
 
-                        <Link href="/" className="text-gray-700 hover:text-[#d4a574] transition">
-                            ← Volver
+                        <Link
+                            href="/"
+                            className="group flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-gray-200 hover:border-[#d4a574] hover:bg-[#fef9f5] transition-all"
+                        >
+                            <svg className="w-5 h-5 text-gray-600 group-hover:text-[#d4a574] transition-colors group-hover:-translate-x-1 transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                            </svg>
+                            <span className="font-medium text-gray-700 group-hover:text-[#d4a574] transition-colors">Volver</span>
                         </Link>
                     </div>
                 </div>
@@ -159,7 +323,7 @@ export default function ServiciosPage() {
                         Nuestros <span className="gradient-text">Servicios</span>
                     </h1>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-                        Tratamientos de belleza premium con más de 10 años de experiencia. Usamos las mejores técnicas y productos del mercado.
+                        Tratamientos de belleza premium con más de 10 años de experiencia.
                     </p>
                 </div>
             </section>
@@ -196,7 +360,7 @@ export default function ServiciosPage() {
             {/* Services Grid */}
             <section className="pb-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto space-y-16">
-                    {filteredCategories.map((category) => (
+                    {activeCategories.map((category) => (
                         <div key={category.id} className="animate-fade-in">
                             <div className="mb-8">
                                 <h2 className="text-3xl font-bold mb-2" style={{ fontFamily: 'var(--font-display)' }}>
@@ -207,31 +371,56 @@ export default function ServiciosPage() {
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {category.services.map((service) => (
-                                    <div key={service.id} className="card p-6 hover:shadow-xl transition-all">
-                                        <div className="mb-4">
-                                            <h3 className="text-xl font-semibold mb-2">{service.name}</h3>
-                                            <p className="text-gray-600 text-sm mb-4">{service.description}</p>
+                                    <div
+                                        key={service.id}
+                                        className="card group p-6 hover:shadow-xl transition-all cursor-pointer relative overflow-hidden border border-transparent hover:border-[#d4a574]/30"
+                                        onClick={() => setSelectedService(service)}
+                                    >
+                                        {/* Tap Hint Animation */}
+                                        <div className="absolute top-4 right-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                            <div className="relative">
+                                                <div className="w-8 h-8 bg-[#d4a574]/10 rounded-full flex items-center justify-center animate-pulse">
+                                                    <svg className="w-5 h-5 text-[#d4a574]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="mb-4 pr-10">
+                                            <h3 className="text-xl font-semibold mb-2 group-hover:text-[#d4a574] transition-colors">{service.name}</h3>
+                                            <p className="text-gray-600 text-sm mb-4 line-clamp-3">{service.description}</p>
                                         </div>
 
                                         <div className="space-y-2 mb-6">
-                                            {service.benefits.map((benefit, idx) => (
+                                            {service.benefits.slice(0, 3).map((benefit, idx) => (
                                                 <div key={idx} className="flex items-center text-sm text-gray-600">
-                                                    <svg className="w-4 h-4 text-[#d4a574] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                                    <svg className="w-4 h-4 text-[#d4a574] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                                     </svg>
-                                                    {benefit}
+                                                    <span className="truncate">{benefit}</span>
                                                 </div>
                                             ))}
+                                            {service.benefits.length > 3 && (
+                                                <div className="text-xs text-[#d4a574] pl-6 italic">
+                                                    + {service.benefits.length - 3} beneficios más...
+                                                </div>
+                                            )}
                                         </div>
 
-                                        <div className="flex items-end justify-between pt-4 border-t border-gray-100">
+                                        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pt-4 border-t border-gray-100 mt-auto">
                                             <div>
-                                                <div className="text-3xl font-bold gradient-text">${service.price}</div>
-                                                <div className="text-sm text-gray-500">{service.duration} min</div>
+                                                <div className="text-2xl font-bold gradient-text">{formatPrice(service.price)}</div>
                                             </div>
-                                            <Link href="/reservar" className="btn-primary text-sm">
-                                                Reservar
-                                            </Link>
+                                            <button
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    setSelectedService(service);
+                                                }}
+                                                className="btn-primary text-sm px-4 py-2 text-center w-full sm:w-auto"
+                                            >
+                                                Ver Detalles
+                                            </button>
                                         </div>
                                     </div>
                                 ))}
@@ -240,6 +429,176 @@ export default function ServiciosPage() {
                     ))}
                 </div>
             </section>
+
+            {/* Service Details Modal */}
+            {selectedService && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in" onClick={() => setSelectedService(null)}>
+                    <div className="bg-white rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl relative flex flex-col" onClick={e => e.stopPropagation()}>
+                        {/* Close Button */}
+                        <button
+                            onClick={() => setSelectedService(null)}
+                            className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all"
+                        >
+                            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+
+                        <div className="grid md:grid-cols-2">
+                            {/* Gallery Section */}
+                            <div className="bg-gray-100 min-h-[300px] md:min-h-[500px] relative">
+                                {selectedService.images && selectedService.images.length > 0 ? (
+                                    <div className="h-full grid grid-rows-2 gap-1 p-1">
+                                        <div className="relative row-span-1">
+                                            <Image
+                                                src={selectedService.images[0]}
+                                                alt={selectedService.name}
+                                                fill
+                                                className="object-cover cursor-zoom-in"
+                                                onClick={() => setCurrentImageIndex(0)}
+                                            />
+                                        </div>
+                                        <div className={`grid gap-1 row-span-1 ${selectedService.images.length === 2 ? 'grid-cols-1' : 'grid-cols-2'}`}>
+                                            {selectedService.images.slice(1, 3).map((img: string, idx: number) => (
+                                                <div key={idx} className="relative group cursor-zoom-in" onClick={() => setCurrentImageIndex(idx + 1)}>
+                                                    <Image
+                                                        src={img}
+                                                        alt={`${selectedService.name} ${idx + 2}`}
+                                                        fill
+                                                        className="object-cover"
+                                                    />
+                                                    {/* Overlay for +N images on the last visible image (index 1 of slice => index 2 of full array) */}
+                                                    {idx === 1 && selectedService.images.length > 3 && (
+                                                        <div className="absolute inset-0 bg-black/50 flex items-center justify-center text-white font-bold text-xl backdrop-blur-[2px] transition-all hover:bg-black/60">
+                                                            +{selectedService.images.length - 3}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className="h-full flex items-center justify-center text-gray-400">
+                                        <div className="text-center">
+                                            <svg className="w-16 h-16 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <p>Imágenes próximamente</p>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Content Section */}
+                            <div className="p-5 sm:p-8 overflow-y-auto">
+                                <h2 className="text-2xl sm:text-3xl font-bold mb-2 pr-8" style={{ fontFamily: 'var(--font-display)' }}>
+                                    {selectedService.name}
+                                </h2>
+                                <div className="flex items-center gap-4 text-sm text-gray-500 mb-6 pb-6 border-b border-gray-100">
+                                    {selectedService.durability && (
+                                        <div className="flex items-center">
+                                            <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            {selectedService.durability}
+                                        </div>
+                                    )}
+                                </div>
+
+                                <p className="text-gray-600 mb-6 leading-relaxed text-sm sm:text-base">
+                                    {selectedService.fullDescription || selectedService.description}
+                                </p>
+
+                                <div className="space-y-4 mb-8">
+                                    <h4 className="font-semibold text-gray-900">Beneficios:</h4>
+                                    <ul className="space-y-2">
+                                        {selectedService.benefits.map((benefit: string, idx: number) => (
+                                            <li key={idx} className="flex items-start text-sm text-gray-600">
+                                                <svg className="w-5 h-5 text-[#d4a574] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                                </svg>
+                                                <span className="break-words">{benefit}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <div className="bg-[#fef9f5] p-6 rounded-xl border border-[#d4a574]/20 text-center">
+                                    <div className="text-sm text-gray-500 mb-1">Precio total</div>
+                                    <div className="text-3xl sm:text-4xl font-bold gradient-text mb-4">
+                                        {formatPrice(selectedService.price)}
+                                    </div>
+                                    <Link href={`/reservar?service=${selectedService.id}`} className="btn-primary w-full block">
+                                        Reservar ahora
+                                    </Link>
+                                    <p className="text-xs text-gray-400 mt-4">
+                                        * Se requiere un anticipo para asegurar tu cita
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Image Lightbox Carousel */}
+            {currentImageIndex !== -1 && selectedService && (
+                <div
+                    className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-md flex items-center justify-center animate-fade-in p-4"
+                    onClick={() => setCurrentImageIndex(-1)}
+                >
+                    <button
+                        onClick={() => setCurrentImageIndex(-1)}
+                        className="absolute top-4 right-4 z-[210] w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all backdrop-blur-md"
+                    >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                    {/* Navigation Buttons */}
+                    {selectedService.images.length > 1 && (
+                        <>
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : selectedService.images.length - 1));
+                                }}
+                                className="absolute left-4 z-[210] p-3 text-white/70 hover:text-white transition-colors"
+                            >
+                                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    setCurrentImageIndex((prev) => (prev < selectedService.images.length - 1 ? prev + 1 : 0));
+                                }}
+                                className="absolute right-4 z-[210] p-3 text-white/70 hover:text-white transition-colors"
+                            >
+                                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </>
+                    )}
+
+                    <div className="relative w-full h-full max-w-5xl max-h-[85vh] flex items-center justify-center" onClick={e => e.stopPropagation()}>
+                        <Image
+                            src={selectedService.images[currentImageIndex]}
+                            alt={`Imagen ${currentImageIndex + 1} de ${selectedService.name}`}
+                            fill
+                            className="object-contain"
+                            priority
+                            sizes="100vw"
+                        />
+                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white/80 text-sm font-medium px-4 py-2 bg-black/40 rounded-full backdrop-blur-sm">
+                            {currentImageIndex + 1} / {selectedService.images.length}
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* FAQ Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -261,7 +620,7 @@ export default function ServiciosPage() {
 
                         <div className="card p-6">
                             <h3 className="font-semibold mb-2">¿Incluyen retoque?</h3>
-                            <p className="text-gray-600">Sí, todos los servicios de micropigmentación incluyen un retoque gratuito entre 4-8 semanas después del procedimiento inicial.</p>
+                            <p className="text-gray-600">La mayoría de los servicios de micropigmentación incluyen un retoque en el precio. Para Powder Brows, el retoque tiene un costo de $1,500 MXN entre los 4-8 semanas, y se recomienda para mantener el resultado óptimo durante 2-4 años.</p>
                         </div>
 
                         <div className="card p-6">

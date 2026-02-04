@@ -210,15 +210,36 @@ body {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+
+  /* Tablet optimizations */
+  .section-title {
+    font-size: 2.25rem;
+  }
+
+  /* Better grid spacing */
+  .card {
+    padding: 1.25rem;
+  }
+}
+
 @media (max-width: 768px) {
   .section-title {
     font-size: 1.875rem;
+    line-height: 1.3;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
   }
 
   .btn-primary,
   .btn-secondary {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
+    padding: 1rem 1.75rem;
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
   }
 
   /* Mejoras para navegación móvil */
@@ -234,18 +255,26 @@ body {
 
   /* Cards más compactas */
   .card {
-    padding: 1rem;
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  /* Stats grid en móvil */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
 @media (max-width: 640px) {
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     line-height: 1.2;
   }
 
   .section-subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
   /* Logo responsive */
@@ -260,10 +289,10 @@ body {
     line-height: 1.2;
   }
 
-  /* Botones full width en móvil cuando sea apropiado */
+  /* Botones optimizados para móvil */
   .btn-primary,
   .btn-secondary {
-    padding: 0.875rem 1.25rem;
+    padding: 0.875rem 1.5rem;
   }
 
   /* Grid de 1 columna en móvil */
@@ -274,13 +303,51 @@ body {
   /* Espaciado reducido para móvil */
   .card {
     padding: 1rem;
-    border-radius: 16px;
+    border-radius: 14px;
   }
 
   /* Input más grande para móvil */
   .input {
-    padding: 0.875rem 1rem;
+    padding: 1rem;
     font-size: 16px;
     /* Evita zoom en iOS */
+  }
+
+  /* Footer responsive */
+  footer .grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+}
+
+/* Extra small devices (< 375px) */
+@media (max-width: 374px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.75rem !important;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .card {
+    padding: 0.875rem;
+  }
+}
+
+/* Large devices optimization */
+@media (min-width: 1440px) {
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
   }
 }
