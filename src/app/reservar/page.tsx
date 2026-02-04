@@ -40,11 +40,135 @@ const services = [
     { id: "rejuvenecimiento", name: "Rejuvenecimiento Facial", category: "Láser", price: 1500, duration: 60 },
 ];
 
-// ... (keep CustomCalendar component as is) ...
+// Custom Calendar Component
+function CustomCalendar({ selectedDate, onDateSelect }: { selectedDate: string; onDateSelect: (date: string) => void }) {
+    const [currentMonth, setCurrentMonth] = useState(new Date());
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const year = currentMonth.getFullYear();
+    const month = currentMonth.getMonth();
+
+    // Get first day of month and total days
+    const firstDayOfMonth = new Date(year, month, 1);
+    const lastDayOfMonth = new Date(year, month + 1, 0);
+    const daysInMonth = lastDayOfMonth.getDate();
+    const startingDayOfWeek = firstDayOfMonth.getDay();
+
+    // Create array of day numbers
+    const days = [];
+    for (let i = 0; i < startingDayOfWeek; i++) {
+        days.push(null);
+    }
+    for (let i = 1; i <= daysInMonth; i++) {
+        days.push(i);
+    }
+
+    const monthNames = [
+        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+    ];
+
+    const dayNames = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
+
+    const goToPreviousMonth = () => {
+        setCurrentMonth(new Date(year, month - 1, 1));
+    };
+
+    const goToNextMonth = () => {
+        setCurrentMonth(new Date(year, month + 1, 1));
+    };
+
+    const handleDateClick = (day: number) => {
+        const date = new Date(year, month, day);
+        if (date >= today) {
+            onDateSelect(date.toISOString().split('T')[0]);
+        }
+    };
+
+    const isSelected = (day: number) => {
+        if (!selectedDate) return false;
+        const date = new Date(year, month, day);
+        return date.toISOString().split('T')[0] === selectedDate;
+    };
+
+    const isPast = (day: number) => {
+        const date = new Date(year, month, day);
+        return date < today;
+    };
+
+    const isToday = (day: number) => {
+        const date = new Date(year, month, day);
+        return date.toDateString() === today.toDateString();
+    };
+
+    return (
+        <div className="card p-4 sm:p-6">
+            {/* Month Navigation */}
+            <div className="flex items-center justify-between mb-4">
+                <button
+                    onClick={goToPreviousMonth}
+                    className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                >
+                    <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <h3 className="text-lg font-semibold">
+                    {monthNames[month]} {year}
+                </h3>
+                <button
+                    onClick={goToNextMonth}
+                    className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                >
+                    <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+
+            {/* Day Names */}
+            <div className="grid grid-cols-7 mb-2">
+                {dayNames.map((day) => (
+                    <div key={day} className="text-center text-xs font-medium text-gray-500 py-2">
+                        {day}
+                    </div>
+                ))}
+            </div>
+
+            {/* Calendar Grid */}
+            <div className="grid grid-cols-7 gap-1">
+                {days.map((day, index) => (
+                    <div key={index} className="aspect-square">
+                        {day !== null && (
+                            <button
+                                onClick={() => handleDateClick(day)}
+                                disabled={isPast(day)}
+                                className={`w-full h-full rounded-lg text-sm font-medium transition-all
+                                    ${isSelected(day)
+                                        ? 'bg-[#d4a574] text-white shadow-md'
+                                        : isPast(day)
+                                            ? 'text-gray-300 cursor-not-allowed'
+                                            : isToday(day)
+                                                ? 'bg-[#f5e6d8] text-[#d4a574] hover:bg-[#d4a574] hover:text-white'
+                                                : 'hover:bg-gray-100'
+                                    }
+                                `}
+                            >
+                                {day}
+                            </button>
+                        )}
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
 
 export default function ReservarPage() {
     const searchParams = useSearchParams();
-    const [step, setStep] = useState<Step>(1);
+    const [step, setStep] = useState<number>(1);
     const [selectedBranch, setSelectedBranch] = useState<string | null>(null);
     const [selectedService, setSelectedService] = useState<string | null>(null);
     const [selectedDate, setSelectedDate] = useState<string>("");
