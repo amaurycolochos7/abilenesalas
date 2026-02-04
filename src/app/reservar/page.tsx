@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 // Placeholder data
@@ -166,7 +166,7 @@ function CustomCalendar({ selectedDate, onDateSelect }: { selectedDate: string; 
     );
 }
 
-export default function ReservarPage() {
+function ReservarContent() {
     const searchParams = useSearchParams();
     const [step, setStep] = useState<number>(1);
     const [selectedBranch, setSelectedBranch] = useState<string | null>(null);
@@ -575,5 +575,26 @@ export default function ReservarPage() {
                 </div>
             </div>
         </div>
+    );
+}
+
+// Loading component for Suspense fallback
+function ReservarLoading() {
+    return (
+        <div className="min-h-screen bg-[#faf9f7] flex items-center justify-center">
+            <div className="text-center">
+                <div className="w-12 h-12 border-4 border-[#d4a574] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                <p className="text-gray-600">Cargando...</p>
+            </div>
+        </div>
+    );
+}
+
+// Main export wrapped in Suspense
+export default function ReservarPage() {
+    return (
+        <Suspense fallback={<ReservarLoading />}>
+            <ReservarContent />
+        </Suspense>
     );
 }
